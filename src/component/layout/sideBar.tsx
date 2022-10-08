@@ -13,9 +13,9 @@ export default function SideBar() {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
 
-    useEffect(() =>{
+    useEffect(() => {
         setCurrentPage(location.pathname.split('/')[1])
-    },[location])
+    }, [location])
 
     return (
         <Drawer
@@ -40,7 +40,7 @@ export default function SideBar() {
                             <ListItem
                                 button
                                 sx={{
-                                    mb:1,
+                                    mb: 1,
                                     ...(menu.href.includes(currentPage) && {
                                         color: "white",
                                         backgroundColor: (theme) =>
@@ -48,7 +48,7 @@ export default function SideBar() {
                                     })
                                 }}
                             >
-                                <Link to={menu.href} style={{display: 'block',width:"100%",}}>
+                                <Link to={menu.href} style={{display: 'block', width: "100%",}}>
                                     <ListItemText>{menu.title}</ListItemText>
                                 </Link>
                             </ListItem>
