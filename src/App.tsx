@@ -1,12 +1,9 @@
 import React from 'react';
-import {DashboardLayout} from "@/component/layout/layout";
-
+import Layout from "@/component/layout";
 function App() {
     return (
         <div className="App">
-            <DashboardLayout>
-                zz
-            </DashboardLayout>
+            <Layout/>
         </div>
     );
 }
