@@ -11,7 +11,13 @@ export default function SideBar() {
 
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
-    const {isOpenSideBar, handleCloseSideBar} = useSideBar();
+    const {isOpenSideBar, handleOpenSideBar, handleCloseSideBar} = useSideBar();
+    const { isOpen } = isOpenSideBar;
+
+    useEffect(() => {
+        if(!isDesktop && isOpen) return handleCloseSideBar();
+        if(isDesktop && !isOpen) return handleOpenSideBar();
+    },[isDesktop])
 
     useEffect(() => {
         setCurrentPage(location.pathname.split('/')[1])
@@ -20,12 +26,12 @@ export default function SideBar() {
     return (
         <Drawer
             anchor="left"
-            open={isOpenSideBar.isOpen}
+            open={isOpen}
             onClose={handleCloseSideBar}
-            variant={isDesktop ? "persistent" : "temporary"}
+            variant={isDesktop && isOpen ? "persistent" : "temporary"}
             PaperProps={{
                 sx: {
-                    width: '265px',
+                    width: 265
                     // boxShadow: "0px 7px 30px 0px rgb(113 122 131 / 11%)",
                 }
             }}

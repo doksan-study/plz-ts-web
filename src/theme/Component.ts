@@ -1,8 +1,3 @@
-import GmarketSansLight from '@assets/font/Pretendard-Light.woff';
-import GmarketSansMedium from '@assets/font/GmarketSansMedium.woff';
-import GmarketSansBold from '@assets/font/GmarketSansBold.woff';
-
-
 const components = {
     MuiCssBaseline: {
         styleOverrides: {
@@ -76,7 +71,7 @@ const components = {
                 borderRadius: "5px",
                 padding: "14px",
                 margin: "15px",
-                boxShadow:"none",
+                boxShadow: "none",
                 border: "1px solid #ececec"
                 // boxShadow: "0px 7px 30px 0px rgba(90, 114, 123, 0.11)",
             },
@@ -122,93 +117,5 @@ const components = {
             },
         },
     },
-    "@font-face": [
-        {
-            fontFamily: 'Gmarket Sans',
-            fontWeight: "300",
-            fontStyle: "normal",
-            src: `url(${GmarketSansLight}) format('woff')`,
-            fontDisplay: "swap",
-        },
-        {
-            fontFamily: 'Gmarket Sans',
-            fontWeight: "500",
-            fontStyle: "normal",
-            src: `url(${GmarketSansMedium}) format('woff')`,
-            fontDisplay: "swap",
-        }, {
-            fontFamily: 'Gmarket Sans',
-            fontWeight: "700",
-            fontStyle: "normal",
-            src: `url(${GmarketSansBold}) format('woff')`,
-            fontDisplay: "swap",
-        },
-    ],
-    /* Todo 폰트패밀리 여러개 어떻게 적용함...?b
-
-
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: "900",
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-Black.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: "800",
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-ExtraBold.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: "700",
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-Bold.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: 600,
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-SemiBold.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: "500"
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-Medium.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: 400,
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-Regular.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: 300,
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-Light.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: 200,
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-ExtraLight.woff) format('woff'),
-    },
-
-    "@font-face": {
-        fontFamily: 'Pretendard',
-        fontWeight: 100,
-        fontDisplay: "swap",
-        src: url(#{$assetPath}/Pretendard-Thin.woff) format('woff'),
-     */
 }
 export default components

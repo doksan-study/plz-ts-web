@@ -8,29 +8,6 @@ interface PropsType {
     children: ReactNode
 }
 
-const MainWrapper = experimentalStyled("div")(() => ({
-    display: "flex",
-    minHeight: "100vh",
-    overflow: "hidden",
-    width: "100%",
-}));
-
-const PageWrapper = experimentalStyled("div")(({theme}) => ({
-    display: "flex",
-    flex: "1 1 auto",
-    overflow: "hidden",
-
-    // backgroundColor: theme.palette.background.default,
-    backgroundColor: "#fff",
-    paddingTop: "64px"
-    // [theme.breakpoints.up("lg")]: {
-    //     paddingTop: "64px",
-    // },
-    // [theme.breakpoints.down("lg")]: {
-    //     paddingTop: "64px",
-    // },
-}));
-
 export default function Layout({children}: PropsType) {
     // TODO SideBar Open State
     const theme = useTheme();
@@ -55,3 +32,26 @@ export default function Layout({children}: PropsType) {
         </MainWrapper>
     )
 }
+
+const MainWrapper = experimentalStyled("div")(() => ({
+    display: "flex",
+    minHeight: "100vh",
+    overflow: "hidden",
+    width: "100%",
+}));
+
+const PageWrapper = experimentalStyled("div")(({theme}) => ({
+    display: "flex",
+    flex: "1 1 auto",
+    overflow: "hidden",
+
+    // backgroundColor: theme.palette.background.default,
+    backgroundColor: "#fff",
+    paddingTop: "64px"
+    // [theme.breakpoints.up("lg")]: {
+    //     paddingTop: "64px",
+    // },
+    // [theme.breakpoints.down("lg")]: {
+    //     paddingTop: "64px",
+    // },
+}));

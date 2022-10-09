@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: url(../font/GmarketSansLight.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 500;
+  font-style: normal;
+  src: url(../font/GmarketSansMedium.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../font/GmarketSansBold.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: url(../font/Pretendard-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: url(../font/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: url(../font/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: url(../font/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: url(../font/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: url(../font/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: url(../font/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: url(../font/Pretendard-Thin.woff) format("woff");
+}
+.material-icons, .material-icons-outlined {
+  color: inherit;
+  font-size: inherit;
+}
+
+/*# sourceMappingURL=font.css.map */
