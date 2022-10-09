@@ -26,7 +26,7 @@ export default function SideBar() {
             PaperProps={{
                 sx: {
                     width: '265px',
-                    boxShadow: "0px 7px 30px 0px rgb(113 122 131 / 11%)",
+                    // boxShadow: "0px 7px 30px 0px rgb(113 122 131 / 11%)",
                 }
             }}
         >

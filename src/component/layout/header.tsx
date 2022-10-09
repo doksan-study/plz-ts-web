@@ -7,7 +7,9 @@ export default function Header(){
 
     return (
         <AppBar sx={{
-            backgroundColor: '#fbfbfb',
+            backgroundColor: '#fff',
+            boxShadow: "none",
+            border: "1px solid #ececec",
             paddingLeft: isDesktop ? "265px" : "",
         }}>
             <Toolbar>

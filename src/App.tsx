@@ -6,12 +6,30 @@ const Sample = () => {
     return (
         <Grid container spacing={0}>
             <Grid item xs={12} lg={12}>
+                {/*<Card>*/}
+                <Typography variant="h1">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                <Typography variant="h2">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                <Typography variant="h3">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                <Typography variant="h4">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                <Typography variant="body1">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                <Box p={2} display="flex" alignItems="center">
+                    <Typography variant="h1">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <Typography variant="h2">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <Typography variant="h3">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <Typography variant="h4">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <Typography variant="body1">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                </Box>
                 <Card>
-                    <Box p={2} display="flex" alignItems="center">
-                        <Typography variant="h4">안녕ㅋ</Typography>
-                    </Box>
-                    <CardContent>Gdgd</CardContent>
+                    <Typography variant="h2">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <Typography variant="h3">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <Typography variant="h4">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <Typography variant="body1">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                    <CardContent>
+                        <Typography variant="h1">솔직히 이 폰트 진짜 괜찮은듯</Typography>
+                        솔직히 이 폰트 진짜 괜찮은듯
+                    </CardContent>
                 </Card>
+                {/*</Card>*/}
                 {/*<BaseCard title="Alerts">*/}
                 {/*</BaseCard>*/}
             </Grid>

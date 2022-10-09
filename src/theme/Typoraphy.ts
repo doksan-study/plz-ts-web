@@ -1,35 +1,36 @@
 const typography = {
+  // fontFamily: "'Gmarket Sans','DM Sans', sans-serif",
   fontFamily: "'DM Sans', sans-serif",
   body1: {
-    fontWeight: 400, // or 'bold'
+    fontWeight: "500", // or 'bold'
   },
   h1: {
-    fontWeight: 500,
+    fontWeight: "700",
     fontSize: "1.875rem",
     lineHeight: "1.5",
   },
   h2: {
-    fontWeight: 500,
+    fontWeight: "500",
     fontSize: "1.5rem",
     lineHeight: "1.5",
   },
   h3: {
-    fontWeight: 500,
+    fontWeight: "500",
     fontSize: "1.3125rem",
     lineHeight: "1.5",
   },
   h4: {
-    fontWeight: 500,
+    fontWeight: "500",
     fontSize: "1.125rem",
     lineHeight: "1.5",
   },
   h5: {
-    fontWeight: 500,
+    fontWeight: "500",
     fontSize: "1rem",
     lineHeight: "1.5",
   },
   h6: {
-    fontWeight: 500,
+    fontWeight: "500",
     fontSize: "0.875rem",
     lineHeight: "1.5",
   },

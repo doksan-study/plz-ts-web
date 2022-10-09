@@ -1,3 +1,8 @@
+import GmarketSansLight from '@assets/font/Pretendard-Light.woff';
+import GmarketSansMedium from '@assets/font/GmarketSansMedium.woff';
+import GmarketSansBold from '@assets/font/GmarketSansBold.woff';
+
+
 const components = {
     MuiCssBaseline: {
         styleOverrides: {
@@ -23,14 +28,6 @@ const components = {
             "*[dir='rtl'] .buyNowImg": {
                 transform: "scaleX(-1)",
             },
-
-            ".buyNowImg": {
-                position: "absolute",
-                right: "-44px",
-                top: "-18px",
-                width: "143px",
-                height: "175px",
-            },
             ".MuiCardHeader-action": {
                 alignSelf: "center !important",
             },
@@ -47,7 +44,7 @@ const components = {
             root: {
                 paddingLeft: "15px !important",
                 paddingRight: "15px !important",
-                maxWidth: "1600px",
+                // maxWidth: "1600px",
             },
         },
     },
@@ -68,7 +65,7 @@ const components = {
     MuiListItem: {
         styleOverrides: {
             root: {
-                borderRadius: "9px",
+                borderRadius: "5px",
             },
         },
     },
@@ -76,10 +73,12 @@ const components = {
     MuiCard: {
         styleOverrides: {
             root: {
-                borderRadius: "20px",
+                borderRadius: "5px",
                 padding: "14px",
                 margin: "15px",
-                boxShadow: "0px 7px 30px 0px rgba(90, 114, 123, 0.11)",
+                boxShadow:"none",
+                border: "1px solid #ececec"
+                // boxShadow: "0px 7px 30px 0px rgba(90, 114, 123, 0.11)",
             },
         },
     },
@@ -122,30 +121,31 @@ const components = {
                 fontSize: "0.75rem",
             },
         },
-    }
+    },
+    "@font-face": [
+        {
+            fontFamily: 'Gmarket Sans',
+            fontWeight: "300",
+            fontStyle: "normal",
+            src: `url(${GmarketSansLight}) format('woff')`,
+            fontDisplay: "swap",
+        },
+        {
+            fontFamily: 'Gmarket Sans',
+            fontWeight: "500",
+            fontStyle: "normal",
+            src: `url(${GmarketSansMedium}) format('woff')`,
+            fontDisplay: "swap",
+        }, {
+            fontFamily: 'Gmarket Sans',
+            fontWeight: "700",
+            fontStyle: "normal",
+            src: `url(${GmarketSansBold}) format('woff')`,
+            fontDisplay: "swap",
+        },
+    ],
     /* Todo 폰트패밀리 여러개 어떻게 적용함...?b
-    "@font-face": {
-        fontFamily: 'Gmarket Sans',
-        fontWeight: ["300"],
-        fontStyle: "normal",
-        src: `url(${GmarketSansLight}) format('woff')`,
-        fontDisplay: "swap",
-    },
-    "@font-face": {
-        fontFamily: 'Gmarket Sans',
-        fontWeight: "500",
-        fontStyle: "normal",
-        src: `url(${GmarketSansMedium}) format('woff')`,
-        fontDisplay: "swap",
-    },
 
-    "@font-face": {
-        fontFamily: 'Gmarket Sans',
-        fontWeight: "700",
-        fontStyle: "normal",
-        src: `url(${GmarketSansBold}) format('woff')`,
-        fontDisplay: "swap",
-    },
 
 
     "@font-face": {

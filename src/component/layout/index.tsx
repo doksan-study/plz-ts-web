@@ -19,7 +19,8 @@ const PageWrapper = experimentalStyled("div")(({theme}) => ({
     flex: "1 1 auto",
     overflow: "hidden",
 
-    backgroundColor: theme.palette.background.default,
+    // backgroundColor: theme.palette.background.default,
+    backgroundColor: "#fff",
     paddingTop: "64px"
     // [theme.breakpoints.up("lg")]: {
     //     paddingTop: "64px",
