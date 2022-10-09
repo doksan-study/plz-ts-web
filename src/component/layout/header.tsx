@@ -1,6 +1,8 @@
-import {AppBar, Button, experimentalStyled, IconButton, Toolbar, useMediaQuery, useTheme} from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
 import {useSideBar} from "@/hooks";
+import {AppBar, Button, experimentalStyled, IconButton, Toolbar, useMediaQuery, useTheme} from "@mui/material";
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import StarRateOutlinedIcon from '@mui/icons-material/StarRateOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
     const theme = useTheme();
@@ -25,7 +27,16 @@ export default function Header() {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Button variant="contained">로그인</Button>
+                    <Utils>
+                        <Button variant="contained" color="secondary" startIcon={<StarRateOutlinedIcon/>}>
+                            찜한상품
+                        </Button>
+                        <Button variant="contained" color="secondary" startIcon={<ShoppingBagOutlinedIcon/>}>
+                            장바구니
+                        </Button>
+                        <Button variant="contained">마이페이지</Button>
+                        <Button variant="outlined">로그인</Button>
+                    </Utils>
                 </ToolbarWrap>
             </Toolbar>
         </AppBar>
@@ -37,4 +48,10 @@ const ToolbarWrap = experimentalStyled("div")(() => ({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
+}));
+
+const Utils = experimentalStyled("div")(() => ({
+    display: "flex",
+    gap: "8px",
+    alignItems: "center",
 }));

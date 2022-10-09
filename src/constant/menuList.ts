@@ -1,8 +1,13 @@
 const MenuList = [
     {
-        title: "Dashbaord",
+        title: "Rules",
         icon: "home",
         href: "/",
+    },
+    {
+        title: "Dashbaord",
+        icon: "home",
+        href: "/dashboard",
     },
     {
         title: "Buttons",
