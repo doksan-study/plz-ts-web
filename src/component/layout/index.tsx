@@ -2,6 +2,7 @@ import Header from "@/component/layout/header";
 import SideBar from "@/component/layout/sideBar";
 import {ReactNode} from "react";
 import {Box, Container, experimentalStyled, useMediaQuery, useTheme} from "@mui/material";
+import {useSideBar} from "@/hooks";
 
 interface PropsType {
     children: ReactNode
@@ -34,6 +35,7 @@ export default function Layout({children}: PropsType) {
     // TODO SideBar Open State
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
+    const {isOpenSideBar} = useSideBar();
 
     return (
         <MainWrapper>
@@ -44,7 +46,7 @@ export default function Layout({children}: PropsType) {
                     maxWidth={false}
                     sx={{
                         paddingTop: "20px",
-                        paddingLeft: isDesktop ? "280px !important" : "",
+                        paddingLeft: isDesktop && isOpenSideBar.isOpen ? "280px !important" : "",
                     }}
                 >
                     <Box sx={{minHeight: "calc(100vh - 170px)"}}>{children}</Box>

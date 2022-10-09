@@ -2,16 +2,16 @@ import {Box, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme} from
 import MenuList from "@/constant/menuList";
 import {useEffect, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
+import { useSideBar } from "@/hooks";
 import LogoDark from "@assets//images/logo-dark.svg"
 
 export default function SideBar() {
     const location = useLocation();
     const [currentPage, setCurrentPage] = useState<string>("/")
-    const [isOpen, setIsOpen] = useState(true);
-    const onClose = () => setIsOpen(false);
 
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
+    const {isOpenSideBar, handleCloseSideBar} = useSideBar();
 
     useEffect(() => {
         setCurrentPage(location.pathname.split('/')[1])
@@ -20,8 +20,8 @@ export default function SideBar() {
     return (
         <Drawer
             anchor="left"
-            open={isOpen}
-            onClose={onClose}
+            open={isOpenSideBar.isOpen}
+            onClose={handleCloseSideBar}
             variant={isDesktop ? "persistent" : "temporary"}
             PaperProps={{
                 sx: {
@@ -37,6 +37,7 @@ export default function SideBar() {
                 <List>
                     {MenuList.map((menu, index) =>
                         <List component="li" disablePadding key={index}>
+                            <Link to={menu.href} style={{display: 'block', width: "100%",}}>
                             <ListItem
                                 button
                                 sx={{
@@ -48,10 +49,9 @@ export default function SideBar() {
                                     })
                                 }}
                             >
-                                <Link to={menu.href} style={{display: 'block', width: "100%",}}>
                                     <ListItemText>{menu.title}</ListItemText>
-                                </Link>
                             </ListItem>
+                            </Link>
                         </List>
                     )}
                 </List>
