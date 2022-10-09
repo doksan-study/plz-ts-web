@@ -2,7 +2,7 @@ import {Box, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme} from
 import MenuList from "@/constant/menuList";
 import {useEffect, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
-import { useSideBar } from "@/hooks";
+import {useSideBar} from "@/hooks";
 import LogoDark from "@assets//images/logo-dark.svg"
 
 export default function SideBar() {
@@ -38,19 +38,19 @@ export default function SideBar() {
                     {MenuList.map((menu, index) =>
                         <List component="li" disablePadding key={index}>
                             <Link to={menu.href} style={{display: 'block', width: "100%",}}>
-                            <ListItem
-                                button
-                                sx={{
-                                    mb: 1,
-                                    ...(menu.href.includes(currentPage) && {
-                                        color: "white",
-                                        backgroundColor: (theme) =>
-                                            `${theme.palette.primary.main}!important`,
-                                    })
-                                }}
-                            >
+                                <ListItem
+                                    button
+                                    sx={{
+                                        mb: 1,
+                                        ...(menu.href.includes(currentPage) && {
+                                            color: "white",
+                                            backgroundColor: (theme) =>
+                                                `${theme.palette.primary.main}!important`,
+                                        })
+                                    }}
+                                >
                                     <ListItemText>{menu.title}</ListItemText>
-                            </ListItem>
+                                </ListItem>
                             </Link>
                         </List>
                     )}
