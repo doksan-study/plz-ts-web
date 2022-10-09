@@ -1,4 +1,3 @@
-import "@noonnu/gmarketsansmedium"
 import "@/assets/css/font.css"
 const typography = {
   // fontFamily: "'Gmarket Sans','DM Sans', sans-serif",
