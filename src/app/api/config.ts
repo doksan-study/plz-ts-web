@@ -1,4 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios';
+import {getCookie} from "@/util/cookie";
+import {cookieList} from "@/constant/localize";
 
 
 const config: AxiosRequestConfig = {
@@ -10,7 +12,7 @@ const config: AxiosRequestConfig = {
 }
 const registrationConfig: AxiosRequestConfig = {
     ...config,
-    // headers: {Authorization: `Bearer ${GetSession('user')}`}
+    headers: {Authorization: `Bearer ${getCookie(cookieList[0])}`}
 }
 const unRegisterAPI = axios.create(config);
 const RegisterAPI = axios.create(registrationConfig);

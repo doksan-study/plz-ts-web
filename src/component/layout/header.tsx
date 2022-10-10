@@ -4,12 +4,25 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import StarRateOutlinedIcon from '@mui/icons-material/StarRateOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import {NavLink} from "react-router-dom";
-import React from "react";
+import React, {useState} from "react";
+import {useCookies} from "react-cookie";
+import {getCookie} from "@/util/cookie";
+import {cookieList} from "@/constant/localize";
 
 export default function Header() {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
     const {isOpenSideBar, handleToggleSideBar} = useSideBar();
+
+    const [cookies, setCookie, removeCookie] = useCookies();
+    const [isAuth, setIsAuth] = useState<boolean>(!!getCookie(cookieList[0]))
+
+    const onAuthOut = () => {
+        if (window.confirm('로그아웃 하시겠어요?')) {
+            removeCookie(cookieList[0])
+            setIsAuth(false)
+        }
+    }
 
     return (
         <AppBar sx={{
@@ -30,16 +43,19 @@ export default function Header() {
                         <MenuIcon/>
                     </IconButton>
                     <Utils>
-                        <Button variant="contained" color="secondary" startIcon={<StarRateOutlinedIcon/>}>
-                            찜한상품
-                        </Button>
-                        <Button variant="contained" color="secondary" startIcon={<ShoppingBagOutlinedIcon/>}>
-                            장바구니
-                        </Button>
-                        <Button variant="contained">마이페이지</Button>
-                        <Button variant="outlined" component={NavLink} to="/login">
-                            로그인
-                        </Button>
+                        {!isAuth ?
+                            <Button variant="outlined" component={NavLink} to="/login">로그인</Button> :
+                            <>
+                                <Button variant="contained" color="secondary" startIcon={<StarRateOutlinedIcon/>}>
+                                    찜한상품
+                                </Button>
+                                <Button variant="contained" color="secondary" startIcon={<ShoppingBagOutlinedIcon/>}>
+                                    장바구니
+                                </Button>
+                                <Button variant="contained">마이페이지</Button>
+                                <Button variant="outlined" onClick={onAuthOut}>로그아웃</Button>
+                            </>
+                        }
                     </Utils>
                 </ToolbarWrap>
             </Toolbar>
