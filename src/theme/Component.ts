@@ -53,6 +53,10 @@ const components = {
                 "&:hover": {
                     boxShadow: "none",
                 },
+                "&:not(:first-of-type)":{
+                    marginLeft: "0"
+                }
+
             },
         },
     },

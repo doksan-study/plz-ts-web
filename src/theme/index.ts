@@ -19,7 +19,6 @@ const theme = createTheme({
     },
     success: {
       main: "#00c292",
-
       dark: "#00964b",
       contrastText: "#ffffff",
     },
@@ -30,15 +29,14 @@ const theme = createTheme({
     info: {
       main: "#0bb2fb",
       light: "#a7e3f4",
+      contrastText: "#ffffff",
     },
     error: {
       main: "#e46a76",
-
       dark: "#e45a68",
     },
     warning: {
       main: "#fec90f",
-
       dark: "#dcb014",
       contrastText: "#ffffff",
     },

@@ -3,6 +3,8 @@ import {AppBar, Button, experimentalStyled, IconButton, Toolbar, useMediaQuery, 
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import StarRateOutlinedIcon from '@mui/icons-material/StarRateOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
+import {NavLink} from "react-router-dom";
+import React from "react";
 
 export default function Header() {
     const theme = useTheme();
@@ -35,7 +37,9 @@ export default function Header() {
                             장바구니
                         </Button>
                         <Button variant="contained">마이페이지</Button>
-                        <Button variant="outlined">로그인</Button>
+                        <Button variant="outlined" component={NavLink} to="/login">
+                            로그인
+                        </Button>
                     </Utils>
                 </ToolbarWrap>
             </Toolbar>
