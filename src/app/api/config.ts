@@ -15,6 +15,6 @@ const registrationConfig: AxiosRequestConfig = {
     headers: {Authorization: `Bearer ${getCookie(cookieList[0])}`}
 }
 const unRegisterAPI = axios.create(config);
-const RegisterAPI = axios.create(registrationConfig);
+const registerAPI = axios.create(registrationConfig);
 
-export {unRegisterAPI, RegisterAPI};
+export {unRegisterAPI, registerAPI};

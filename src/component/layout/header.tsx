@@ -52,7 +52,7 @@ export default function Header() {
                                 <Button variant="contained" color="secondary" startIcon={<ShoppingBagOutlinedIcon/>}>
                                     장바구니
                                 </Button>
-                                <Button variant="contained">마이페이지</Button>
+                                <Button variant="contained" component={NavLink} to="/mypage">마이페이지</Button>
                                 <Button variant="outlined" onClick={onAuthOut}>로그아웃</Button>
                             </>
                         }
