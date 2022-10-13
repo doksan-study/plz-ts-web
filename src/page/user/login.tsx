@@ -47,7 +47,7 @@ export default function Login() {
         mutate(formData, {
             onSuccess: (data: UserLoginResponseSuccess) => {
                 // console.log(data)
-                const {token} = data.data;
+                const {data: token} = data;
                 setCookie(cookieList[0], token, {
                     path: "/",
                     secure: true,
