@@ -1,5 +1,5 @@
 import {useRecoilState} from "recoil";
-import {sideBarState} from "@/recoil";
+import {sideBarState} from "@/app/recoil";
 
 export default function useSideBar() {
     const [isOpenSideBar, setIsOpenSideBar] = useRecoilState(sideBarState);

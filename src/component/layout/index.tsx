@@ -9,7 +9,6 @@ interface PropsType {
 }
 
 export default function Layout({children}: PropsType) {
-    // TODO SideBar Open State
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
     const {isOpenSideBar} = useSideBar();

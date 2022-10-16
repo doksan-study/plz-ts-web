@@ -1,0 +1,1 @@
+export const cookieList = ["plzAuth"] as const;

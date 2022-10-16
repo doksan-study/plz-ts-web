@@ -1,7 +1,7 @@
 import {Box, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme} from "@mui/material";
 import MenuList from "@/constant/menuList";
 import {useEffect, useState} from "react";
-import {Link, useLocation} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import {useSideBar} from "@/hooks";
 import LogoDark from "@assets//images/logo-dark.svg"
 
@@ -12,12 +12,12 @@ export default function SideBar() {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
     const {isOpenSideBar, handleOpenSideBar, handleCloseSideBar} = useSideBar();
-    const { isOpen } = isOpenSideBar;
+    const {isOpen} = isOpenSideBar;
 
     useEffect(() => {
-        if(!isDesktop && isOpen) return handleCloseSideBar();
-        if(isDesktop && !isOpen) return handleOpenSideBar();
-    },[isDesktop])
+        if (!isDesktop && isOpen) return handleCloseSideBar();
+        if (isDesktop && !isOpen) return handleOpenSideBar();
+    }, [isDesktop])
 
     useEffect(() => {
         setCurrentPage(location.pathname.split('/')[1])
@@ -37,27 +37,27 @@ export default function SideBar() {
             }}
         >
             <Box mt={2} px={1}>
-                <Link to="/">
+                <NavLink to="/">
                     <img src={LogoDark} alt="LOGO"/>
-                </Link>
+                </NavLink>
                 <List>
                     {MenuList.map((menu, index) =>
                         <List component="li" disablePadding key={index}>
-                            <Link to={menu.href} style={{display: 'block', width: "100%",}}>
-                                <ListItem
-                                    button
-                                    sx={{
-                                        mb: 1,
-                                        ...(menu.href.includes(currentPage) && {
-                                            color: "white",
-                                            backgroundColor: (theme) =>
-                                                `${theme.palette.primary.main}!important`,
-                                        })
-                                    }}
-                                >
-                                    <ListItemText>{menu.title}</ListItemText>
-                                </ListItem>
-                            </Link>
+                            <ListItem
+                                button
+                                component={NavLink}
+                                to={menu.href}
+                                sx={{
+                                    mb: 1,
+                                    ...(menu.href.includes(currentPage) && {
+                                        color: "white",
+                                        backgroundColor: (theme) =>
+                                            `${theme.palette.primary.main}!important`,
+                                    })
+                                }}
+                            >
+                                <ListItemText>{menu.title}</ListItemText>
+                            </ListItem>
                         </List>
                     )}
                 </List>

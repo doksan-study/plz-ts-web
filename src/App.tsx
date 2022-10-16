@@ -1,6 +1,7 @@
-import React from 'react';
-import Layout from "@/component/layout";
+import React, {useEffect} from 'react';
 import {Box, Card, CardContent, Grid, Typography} from '@mui/material';
+import {PublicRoutes} from "@/routes";
+
 
 const Sample = () => {
     return (
@@ -40,7 +41,10 @@ const Sample = () => {
 function App() {
     return (
         <div className="App">
-            <Layout children={<Sample/>}/>
+
+            <PublicRoutes/>
+
+            {/*<Layout children={<Sample/>}/>*/}
         </div>
     );
 }

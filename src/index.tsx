@@ -9,6 +9,7 @@ import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 import {ThemeProvider} from "@mui/system";
 import {CssBaseline} from "@mui/material";
 import theme from "@/theme";
+import {CookiesProvider} from 'react-cookie';
 import {HelmetProvider} from 'react-helmet-async';
 
 
@@ -30,11 +31,13 @@ root.render(
             <QueryClientProvider client={queryClient}>
                 <ThemeProvider theme={theme}>
                     <CssBaseline/>
-                    <BrowserRouter>
-                        <HelmetProvider>
-                            <App/>
-                        </HelmetProvider>
-                    </BrowserRouter>
+                    <CookiesProvider>
+                        <BrowserRouter>
+                            <HelmetProvider>
+                                <App/>
+                            </HelmetProvider>
+                        </BrowserRouter>
+                    </CookiesProvider>
                 </ThemeProvider>
 
                 {process.env.NODE_ENV === "development" && (
