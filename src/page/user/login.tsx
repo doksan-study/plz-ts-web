@@ -15,7 +15,7 @@ import {NavLink, useNavigate} from "react-router-dom";
 import Logo from "@/component/common/logo";
 import {useMutation} from "@tanstack/react-query";
 import {loginReq} from "@/app/api/user";
-import {User, UserLoginResponseFail, UserLoginResponseSuccess} from "@/app/api/user/types";
+import {User, UserLoginResponseFail, UserLoginResponseSuccess} from "@/model/user";
 import {AxiosError} from "axios";
 import {LoadingButton} from "@mui/lab";
 import {cookieList} from "@/constant/localize";
@@ -92,6 +92,7 @@ export default function Login() {
                                         name="email"
                                         placeholder="sample@yourEmail.com"
                                         onChange={onChangeFormData}
+                                        disabled={isLoading}
                                         InputProps={{
                                             startAdornment: (
                                                 <InputAdornment position="start">
@@ -109,6 +110,7 @@ export default function Login() {
                                         name="password"
                                         placeholder="**********"
                                         onChange={onChangeFormData}
+                                        disabled={isLoading}
                                         InputProps={{
                                             startAdornment: (
                                                 <InputAdornment position="start">

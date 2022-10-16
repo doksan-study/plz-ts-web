@@ -14,10 +14,8 @@ export default function MyPage() {
         () => myInfoReq(),
         {staleTime: 60 * 1000}
     );
-    console.log(isError)
-    console.log(data);
 
-    if (isError) return <>고장났네</>
+    if (isError) return (<>고장났네</>)
     if (isLoading) return <>로딩중이네</>
 
     const {data: myInfo} = data;
