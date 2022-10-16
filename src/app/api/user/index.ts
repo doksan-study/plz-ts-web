@@ -1,5 +1,5 @@
 import {registerAPI, unRegisterAPI} from "@/app/api/config";
-import {MyInfo, User} from "@/app/api/user/types";
+import {MyInfo, User} from "@/model/user";
 
 // Login
 export const loginReq = async (form :User) => {
