@@ -7,7 +7,7 @@ import {RecoilRoot} from "recoil";
 import {QueryClientProvider, QueryClient} from "@tanstack/react-query";
 import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 import {ThemeProvider} from "@mui/system";
-import {CssBaseline} from "@mui/material";
+import {CssBaseline, LinearProgress} from "@mui/material";
 import theme from "@/theme";
 import {CookiesProvider} from 'react-cookie';
 import {HelmetProvider} from 'react-helmet-async';
@@ -21,6 +21,7 @@ const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             retry: 0,
+            suspense: true,
         },
     }
 })
@@ -33,9 +34,11 @@ root.render(
                     <CssBaseline/>
                     <CookiesProvider>
                         <BrowserRouter>
+                            <React.Suspense fallback={<LinearProgress/>}>
                             <HelmetProvider>
                                 <App/>
                             </HelmetProvider>
+                            </React.Suspense>
                         </BrowserRouter>
                     </CookiesProvider>
                 </ThemeProvider>
