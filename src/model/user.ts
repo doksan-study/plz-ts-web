@@ -28,5 +28,4 @@ export interface MyInfo {
             authLevel: number
         }
     }
-
 }
